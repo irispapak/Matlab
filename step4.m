@@ -1,5 +1,5 @@
 
-fid=fopen('/home/irida/Desktop/Σχολή/8ο Εξάμηνο/Πτυχιακή/final2.txt','r');
+fid=fopen('/home/irida/Desktop/final2.txt','r');
 C=textscan(fid,'%4.0f %5.0f %10.3f %10.3f %10.3f %10.3f %10.1f %10.1f %10.1f\n',307,'headerlines',1);
 fclose(fid);
 B=horzcat(C{:});
@@ -7,6 +7,7 @@ B=horzcat(C{:});
 jan=zeros(26,6);feb=zeros(26,6);mar=zeros(26,6);apr=zeros(26,6);may=zeros(26,6);jun=zeros(25,6);
 jul=zeros(25,6);aug=zeros(25,6);sep=zeros(25,6);oct=zeros(25,6);nov=zeros(26,6);dec=zeros(26,6);
 a=1;b=1;c=1;d=1;e=1;f=1;g=1;h=1;i=1;j=1;k=1;l=1;
+
 for w=1:307
    if B(w,2)==1
        jan(a,1)=B(w,4);
@@ -131,92 +132,109 @@ jan=[year2 jan]; feb=[year2 feb]; mar=[year2 mar]; apr=[year2 apr]; may=[year2 m
 jun=[year3 jun]; jul=[year3 jul]; aug=[year3 aug]; sep=[year3 sep]; oct=[year3 oct];
 nov=[year1 nov]; dec=[year1 dec];
 
-fileid=fopen('/home/irida/Desktop/Σχολή/8ο Εξάμηνο/Πτυχιακή/μήνες/jan.txt', 'w');
+fileid=fopen('/home/irida/Desktop/months/jan.txt', 'w');
 fprintf(fileid,'\t%4s\t%10s\t%10s\t%10s\t%10s\t%10s\t%10s\n','year','T1','T2','T3','O1','O2','O3');
+
 for i=1:26
-fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',jan(i,1),jan(i,2),jan(i,3),jan(i,4),jan(i,5),jan(i,6),jan(i,7));
+  fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',jan(i,1),jan(i,2),jan(i,3),jan(i,4),jan(i,5),jan(i,6),jan(i,7));
 end
 fclose(fileid);
 
-fileid=fopen('/home/irida/Desktop/Σχολή/8ο Εξάμηνο/Πτυχιακή/μήνες/feb.txt', 'w');
+
+fileid=fopen('/home/irida/Desktop/months/feb.txt', 'w');
 fprintf(fileid,'\t%4s\t%10s\t%10s\t%10s\t%10s\t%10s\t%10s\n','year','T1','T2','T3','O1','O2','O3');
+
 for i=1:26
-fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',feb(i,1),feb(i,2),feb(i,3),feb(i,4),feb(i,5),feb(i,6),feb(i,7));
+  fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',feb(i,1),feb(i,2),feb(i,3),feb(i,4),feb(i,5),feb(i,6),feb(i,7));
 end
 fclose(fileid);
 
-fileid=fopen('/home/irida/Desktop/Σχολή/8ο Εξάμηνο/Πτυχιακή/μήνες/mar.txt', 'w');
+
+fileid=fopen('/home/irida/Desktop/months/mar.txt', 'w');
 fprintf(fileid,'\t%4s\t%10s\t%10s\t%10s\t%10s\t%10s\t%10s\n','year','T1','T2','T3','O1','O2','O3');
+
 for i=1:26
-fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',mar(i,1),mar(i,2),mar(i,3),mar(i,4),mar(i,5),mar(i,6),mar(i,7));
+  fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',mar(i,1),mar(i,2),mar(i,3),mar(i,4),mar(i,5),mar(i,6),mar(i,7));
 end
 fclose(fileid);
 
-fileid=fopen('/home/irida/Desktop/Σχολή/8ο Εξάμηνο/Πτυχιακή/μήνες/apr.txt', 'w');
+
+fileid=fopen('/home/irida/Desktop/months/apr.txt', 'w');
 fprintf(fileid,'\t%4s\t%10s\t%10s\t%10s\t%10s\t%10s\t%10s\n','year','T1','T2','T3','O1','O2','O3');
+
 for i=1:26
-fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',apr(i,1),apr(i,2),apr(i,3),apr(i,4),apr(i,5),apr(i,6),apr(i,7));
+  fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',apr(i,1),apr(i,2),apr(i,3),apr(i,4),apr(i,5),apr(i,6),apr(i,7));
 end
 fclose(fileid);
 
-fileid=fopen('/home/irida/Desktop/Σχολή/8ο Εξάμηνο/Πτυχιακή/μήνες/may.txt', 'w');
+
+fileid=fopen('/home/irida/Desktop/months/may.txt', 'w');
 fprintf(fileid,'\t%4s\t%10s\t%10s\t%10s\t%10s\t%10s\t%10s\n','year','T1','T2','T3','O1','O2','O3');
+
 for i=1:26
-fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',may(i,1),may(i,2),may(i,3),may(i,4),may(i,5),may(i,6),may(i,7));
+  fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',may(i,1),may(i,2),may(i,3),may(i,4),may(i,5),may(i,6),may(i,7));
 end
 fclose(fileid);
 
-fileid=fopen('/home/irida/Desktop/Σχολή/8ο Εξάμηνο/Πτυχιακή/μήνες/jun.txt', 'w');
+
+fileid=fopen('/home/irida/Desktop/months/jun.txt', 'w');
 fprintf(fileid,'\t%4s\t%10s\t%10s\t%10s\t%10s\t%10s\t%10s\n','year','T1','T2','T3','O1','O2','O3');
+
 for i=1:25
-fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',jun(i,1),jun(i,2),jun(i,3),jun(i,4),jun(i,5),jun(i,6),jun(i,7));
+  fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',jun(i,1),jun(i,2),jun(i,3),jun(i,4),jun(i,5),jun(i,6),jun(i,7));
 end
 fclose(fileid);
 
-fileid=fopen('/home/irida/Desktop/Σχολή/8ο Εξάμηνο/Πτυχιακή/μήνες/jul.txt', 'w');
+
+fileid=fopen('/home/irida/Desktop/months/jul.txt', 'w');
 fprintf(fileid,'\t%4s\t%10s\t%10s\t%10s\t%10s\t%10s\t%10s\n','year','T1','T2','T3','O1','O2','O3');
+
 for i=1:25
-fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',jul(i,1),jul(i,2),jul(i,3),jul(i,4),jul(i,5),jul(i,6),jul(i,7));
+  fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',jul(i,1),jul(i,2),jul(i,3),jul(i,4),jul(i,5),jul(i,6),jul(i,7));
 end
 fclose(fileid);
 
-fileid=fopen('/home/irida/Desktop/Σχολή/8ο Εξάμηνο/Πτυχιακή/μήνες/aug.txt', 'w');
+
+fileid=fopen('/home/irida/Desktop/months/aug.txt', 'w');
 fprintf(fileid,'\t%4s\t%10s\t%10s\t%10s\t%10s\t%10s\t%10s\n','year','T1','T2','T3','O1','O2','O3');
+
 for i=1:25
-fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',aug(i,1),aug(i,2),aug(i,3),aug(i,4),aug(i,5),aug(i,6),aug(i,7));
+  fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',aug(i,1),aug(i,2),aug(i,3),aug(i,4),aug(i,5),aug(i,6),aug(i,7));
 end
 fclose(fileid);
 
-fileid=fopen('/home/irida/Desktop/Σχολή/8ο Εξάμηνο/Πτυχιακή/μήνες/sep.txt', 'w');
+
+fileid=fopen('/home/irida/Desktop/months/sep.txt', 'w');
 fprintf(fileid,'\t%4s\t%10s\t%10s\t%10s\t%10s\t%10s\t%10s\n','year','T1','T2','T3','O1','O2','O3');
+
 for i=1:25
-fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',sep(i,1),sep(i,2),sep(i,3),sep(i,4),sep(i,5),sep(i,6),sep(i,7));
+  fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',sep(i,1),sep(i,2),sep(i,3),sep(i,4),sep(i,5),sep(i,6),sep(i,7));
 end
 fclose(fileid);
 
-fileid=fopen('/home/irida/Desktop/Σχολή/8ο Εξάμηνο/Πτυχιακή/μήνες/oct.txt', 'w');
+
+fileid=fopen('/home/irida/Desktop/months/oct.txt', 'w');
 fprintf(fileid,'\t%4s\t%10s\t%10s\t%10s\t%10s\t%10s\t%10s\n','year','T1','T2','T3','O1','O2','O3');
+
 for i=1:25
-fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',oct(i,1),oct(i,2),oct(i,3),oct(i,4),oct(i,5),oct(i,6),oct(i,7));
+  fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',oct(i,1),oct(i,2),oct(i,3),oct(i,4),oct(i,5),oct(i,6),oct(i,7));
 end
 fclose(fileid);
 
-fileid=fopen('/home/irida/Desktop/Σχολή/8ο Εξάμηνο/Πτυχιακή/μήνες/nov.txt', 'w');
+
+fileid=fopen('/home/irida/Desktop/months/nov.txt', 'w');
 fprintf(fileid,'\t%4s\t%10s\t%10s\t%10s\t%10s\t%10s\t%10s\n','year','T1','T2','T3','O1','O2','O3');
+
 for i=1:26
-fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',nov(i,1),nov(i,2),nov(i,3),nov(i,4),nov(i,5),nov(i,6),nov(i,7));
+  fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',nov(i,1),nov(i,2),nov(i,3),nov(i,4),nov(i,5),nov(i,6),nov(i,7));
 end
 fclose(fileid);
 
-fileid=fopen('/home/irida/Desktop/Σχολή/8ο Εξάμηνο/Πτυχιακή/μήνες/dec.txt', 'w');
+
+fileid=fopen('/home/irida/Desktop/months/dec.txt', 'w');
 fprintf(fileid,'\t%4s\t%10s\t%10s\t%10s\t%10s\t%10s\t%10s\n','year','T1','T2','T3','O1','O2','O3');
+
 for i=1:26
-fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',dec(i,1),dec(i,2),dec(i,3),dec(i,4),dec(i,5),dec(i,6),dec(i,7));
+  fprintf(fileid,'\t%4.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f\n',dec(i,1),dec(i,2),dec(i,3),dec(i,4),dec(i,5),dec(i,6),dec(i,7));
 end
 fclose(fileid);
-
-
-
-
-
-

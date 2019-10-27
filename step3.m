@@ -1,5 +1,5 @@
 
-fid=fopen('/home/irida/Desktop/Σχολή/8ο Εξάμηνο/Πτυχιακή/final2.txt','r');
+fid=fopen('/home/irida/Desktop/final2.txt','r');
 C=textscan(fid,'%4.0f %5.0f %10.3f %10.3f %10.3f %10.3f %10.1f %10.1f %10.1f\n',307,'headerlines',1);
 fclose(fid);
 B=horzcat(C{:});
@@ -192,9 +192,11 @@ month=[1;2;3;4;5;6;7;8;9;10;11;12];
 
 final3=[month T1 T2 T3 O1 O2 O3];
 
-fileid=fopen('/home/irida/Desktop/Σχολή/8ο Εξάμηνο/Πτυχιακή/final3.txt', 'w');
+fileid=fopen('/home/irida/Desktop/final3.txt', 'w');
 fprintf(fileid,'\t%5s\t%10s\t%10s\t%10s\t%10s\t%10s\t%10s\n','month','T1','T2','T3','O1','O2','O3');
+
 for i=1:12
-fprintf(fileid,'\t%5.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f \n',final3(i,1),final3(i,2),final3(i,3),final3(i,4),final3(i,5),final3(i,6),final3(i,7));
+  fprintf(fileid,'\t%5.0f\t%10.3f\t%10.3f\t%10.3f\t%10.1f\t%10.1f\t%10.1f \n',final3(i,1),final3(i,2),final3(i,3),final3(i,4),final3(i,5),final3(i,6),final3(i,7));
 end
+
 fclose(fileid);
